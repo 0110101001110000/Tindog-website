@@ -4,7 +4,6 @@
 
 
 // Requirements
-require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -22,9 +21,7 @@ app.set("view engine", "ejs");
 
 
 app.get("/", (req, res) => {
-    const currentFontAwesomeKey = process.env.FONTAWESOME_KEY;
-    
-    res.render("index", {fontAwesomeKey: currentFontAwesomeKey});
+    res.render("index");
 });
 
 
